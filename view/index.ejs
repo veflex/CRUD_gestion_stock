@@ -1,0 +1,144 @@
+<%- include partial/head.ejs %>
+
+    <body>
+        <h1 class="title">Eval - Gestion de stock</h1>
+
+        <!--       début section produits-->
+        <section id="headerProduct">
+            <h2 class="subtitle">Produits</h2>
+            <div id="icons">
+                <div id="showProd">
+                    <i class="far fa-eye fa-3x show"></i>
+                    <h3>Afficher</h3>
+                </div>
+                <div id="hideProd" class="is-hidden">
+                    <i class="far fa-eye-slash fa-3x hide"></i>
+                    <h3>Cacher</h3>
+                </div>
+                <div id="plusProd">
+                    <i class="fas fa-plus-circle fa-3x plus"></i>
+                    <h3>Ajouter</h3>
+                </div>
+
+                <div id="deleteProd">
+                    <i class="fas fa-trash-alt fa-3x delete"></i>
+                    <h3>Supprimer</h3>
+                </div>
+            </div>
+        </section>
+
+
+        <form id="formProd" class="is-hidden">
+            <div class="form-example">
+                <label for="nom">Nom du Produit: </label>
+                <input type="text" name="nom" id="nom" required>
+            </div>
+            <div class="form-example">
+                <label for="marques">Marque </label>
+                <select name="marques" id="marques">
+                <% for(var marque of marques) {%>
+                <option value=<%=marque.id%>>
+                    <%=marque.nom%>
+                </option>
+                <% } %>
+            </select>
+            </div>
+            <div class="form-example">
+                <label for="description">Description Produit: </label>
+                <input type="text" name="description" id="description" required>
+            </div>
+            <div class="form-example">
+                <label for="prix">Prix Produit: </label>
+                <input type="number" name="prix" id="prix" required>
+            </div>
+
+            <input id="btn_form" type="submit" value="Ajouter">
+        </form>
+
+
+        <table id="tableProd" class="is-hidden">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nom</td>
+                    <td>Marque</td>
+                    <td>Description</td>
+                    <td>Prix</td>
+                    <td>Modifier</td>
+                    <td>Supprimer <input type="checkbox"></td>
+                </tr>
+            </thead>
+            <tbody id="tbodyProd">
+
+            </tbody>
+        </table>
+        <!--       fin section produits-->
+
+
+
+        <!--       début section marques-->
+
+        <section id="headerMarques">
+            <h2 class="subtitle">Marques</h2>
+            <div id="iconsMarques">
+                <div id="showMarques">
+                    <i class="far fa-eye fa-3x show"></i>
+                    <h3>Afficher</h3>
+                </div>
+                <div id="hideMarques" class="is-hidden">
+                    <i class="far fa-eye-slash fa-3x hide"></i>
+                    <h3>Cacher</h3>
+                </div>
+                <div id="plusMarques">
+                    <i class="fas fa-plus-circle fa-3x plus"></i>
+                    <h3>Ajouter</h3>
+                </div>
+
+                <div id="deleteMarques">
+                    <i class="fas fa-trash-alt fa-3x delete"></i>
+                    <h3>Supprimer</h3>
+                </div>
+            </div>
+        </section>
+
+        <form id="formMarques" class="is-hidden">
+            <div class="form-example">
+                <label for="nomMarque">Nom de la Marque: </label>
+                <input type="text" name="nomMarque" id="nomMarque" required>
+            </div>
+
+            <input id="btn_form_M" type="submit" value="Ajouter">
+        </form>
+
+
+        <table id="tableMarques" class="is-hidden">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nom</td>
+                    <td>Modifier</td>
+                    <td>Supprimer <input type="checkbox"></td>
+                </tr>
+            </thead>
+            <tbody id="tbodyMarques">
+                <% for(var marque of marques) {%>
+                    <tr id="marque_<%=marque.id%>">
+                        <td>
+                            <%=marque.id%>
+                        </td>
+                        <td>
+                            <%=marque.nom%>
+                        </td>
+                        <td> <i class="far fa-edit fa-2x modify"></i>
+                            <i class="fas fa-check fa-2x valid is-hidden"></i>
+                        </td>
+                        <td> <input type="checkbox"></td>
+
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <!--      fin section produits-->
+
+
+    </body>

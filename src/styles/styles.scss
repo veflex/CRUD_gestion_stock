@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*titre*/
+
+.title {
+    color: dodgerblue;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/*début header */
+
+#headerProduct,
+#headerMarques {
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    border: 3px solid black;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: lightgrey;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    -ms-flex-pack: distribute;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    margin-left: 10px;
+}
+
+#icons,
+#iconsMarques {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+#plusProd,
+#showProd,
+#hideProd,
+#deleteProd,
+#plusMarques,
+#showMarques,
+#hideMarques,
+#deleteMarques {
+    margin-right: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/*class pour afficher oeil/oeil barré*/
+
+.is-hidden {
+    display: none !important;
+}
+
+.plus,
+.show,
+.hide,
+.delete,
+.modify,
+.valid {
+    cursor: pointer;
+    text-align: center
+}
+
+h3 {
+    font-size: 15px;
+}
+
+.plus:hover,
+.show:hover,
+.hide:hover,
+.delete:hover,
+.modify:hover,
+.valid:hover {
+    color: dodgerblue;
+}
+
+/*fin header */
+
+//début formulaire création
+#formProd,
+#formMarques {
+    text-align: center;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 30px;
+}
+
+//fin formulaire création
+/*début both tableau*/
+
+table {
+    width: 90%;
+    height: auto;
+    margin: 0 auto 30px;
+    border: 3px solid black;
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+
+tbody tr:nth-child(even) {
+    background: lightgrey;
+}
+
+thead td {
+    border-right: 2px solid lightgrey;
+    padding: 20px;
+    text-align: center;
+}
+
+tbody td:nth-child(6),
+tbody td:nth-child(7),
+#tbodyMarques td:nth-child(3),
+#tbodyMarques td:nth-child(4) {
+    text-align: center;
+}
+
+tbody td {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.highlight {
+    border: 3px solid orange;
+}
+
+/*fin tableau*/
